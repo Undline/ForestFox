@@ -7,7 +7,7 @@ This protocol is a work in process (WIP) and **will** change as needed. Please d
 ## Built with
 
 - Python 3.11.3
-- PyQT6
+- PyQt6
 
 ## Overview
 
@@ -37,4 +37,4 @@ Inside of M3L / GSS you will have different mode types that can be activated eit
 
 - **Canvas** -> This is a element that allows a user to create any graphics or drawings on screen and allows the user to scroll on both directions. Use this for things like sketches and markups. You can also add grid lines that allow shapes to snap in place.
 
-**Markdown** -> This element creates a view that can display markdown files. 
+- **Markdown** -> This element creates a view that can display markdown files. 

@@ -35,4 +35,6 @@ Inside of M3L / GSS you will have different mode types that can be activated eit
 
 - **Text Editor** -> This element is used to represent a Text Editor enviroment (not to be confused with Text area). This widget has the option of showing line numbers on the side and can also show the column nunber below.
 
-- **Canvas** -> This is a element that allows a user to create any graphics or drawings on screen and allows the user to scroll on both directions. Use this for things like sketches and markups.
+- **Canvas** -> This is a element that allows a user to create any graphics or drawings on screen and allows the user to scroll on both directions. Use this for things like sketches and markups. You can also add grid lines that allow shapes to snap in place.
+
+**Markdown** -> This element creates a view that can display markdown files. 

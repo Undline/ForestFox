@@ -27,6 +27,8 @@ Inside of M3L / GSS you will have different mode types that can be activated eit
 
 ## Widgets
 
+Each widget will have a source key which indicates where the data is located that contains what that widget is supposed to do / display. This is done so that you can have dynamic content displayed. 
+
 - **Video** -> This element is meant to place a video widget on screen. There are multiple video modes to choose from (mini, normal, wide_screen and full_screen). 
 
 - **Map** -> This element is meant to place a map widget on screen. Map widget are not only useful for showing maps, but could also be used as a system to graphically show points of intrest on a image (2D). 
@@ -42,3 +44,22 @@ Inside of M3L / GSS you will have different mode types that can be activated eit
 - **Cards** -> This element is for creating a card UI element. Cards may consist of a title, sub-title, image, button and a accent color (please note that the accent color can be ignored by a GSS file)
 
 - **Poster** -> This element is just like a card except it's larger on screen. It has the exact same attributes. The advantage to using a poster is that you have more area to write text and the image can be slightly larger.
+
+- **Toast** -> This element creates a temporary pop up and is meant to flash timely information on screen. There are three main types of toast: 
+	1. Information 
+	2. Warning 
+	3. Error
+
+- **Gallery** -> This element is to be used when you have a large set of images that you want to be shown. Images can be accompanied with descriptions with title and sub-title attributes
+
+- **Title_bar** -> Is used in application mode so that you can customize what you would like the application bar to have. Some of those items include, search, settings, menu options (like File, Edit etc.). 
+
+- **Top_Bar** -> This is meant to give an extended tool set to the user. Think something like the ribbon menu you see in applications such as office. A top bar can have a tools and sub-tools (listed as text, icons or both) just be aware that if the view area that the application is running on isn't wide enough some tools can be cut off. 
+
+- **Tabs** -> Tabs is meant to create tabs in a document so that you can quickly switch between page views within your application. Inside tabs you can have a title or you can have a editable text bar and close.
+
+- **Vertical_Tabs** -> This is just like tabs, but instead of having the tabs side by side, they are stacked in a column. *Need a better name for this one*
+
+- **Chat** ->
+
+- **Wiki** ->

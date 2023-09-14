@@ -27,11 +27,15 @@ Inside of M3L / GSS you will have different mode types that can be activated eit
 
 ## Widgets
 
-Each widget will have a source key which indicates where the data is located that contains what that widget is supposed to do / display. This is done so that you can have dynamic content displayed. 
+Each widget will have a source key which indicates where the data is located that contains what that widget is supposed to do / display. This is done so that you can have dynamic content displayed. Widgets can also have event states that trigger when an action is applied?
 
 - **Video** -> This element is meant to place a video widget on screen. There are multiple video modes to choose from (mini, normal, wide_screen and full_screen). 
 
+- **Goal Bar** -> This element is meant for creating a goal like structure; so things like monitary goals or interaction goals. So long as you can qunatify the progress you can use this widget and when the goal is hit there will be an event played (as defined by the GSS). Goal bars use the prgress bar widget and there are some items that you can connect by default inside UndChain such as donation interactions. Goals may go up or down as identified by the M3L.
+
 - **Map** -> This element is meant to place a map widget on screen. Map widget are not only useful for showing maps, but could also be used as a system to graphically show points of intrest on a image (2D). 
+
+- **Timeline** -> This element creates a time line where you can add events that will show as a horizontal bar chart on screen. Time lines will have markers to indicate length and may have images within them per the GSS file. There is also options to add multiple lines down.
 
 - **Graph** -> This element is used to represet a graph widget on screen. Graphs that are currently included are line, chart, pie and fill.
 
@@ -39,13 +43,15 @@ Each widget will have a source key which indicates where the data is located tha
 
 - **Canvas** -> This is a element that allows a user to create any graphics or drawings on screen and allows the user to scroll on both directions. Use this for things like sketches and markups. You can also add grid lines that allow shapes to snap in place.
 
+- **GSS Emulator** -> This is meant to allow users to view a new GSS file within a different enviroment. This is mainly created so that when you create new pages you can view them with different GSS files to see if there are any conflicts with what you are submitting. *Hopefully it's not abused and used as a work-around for making pages that all have a different feel as that is the oppoisite of what is being done.*
+
 - **Markdown** -> This element creates a view that can display markdown files. 
 
-- **Cards** -> This element is for creating a card UI element. Cards may consist of a title, sub-title, image, button and a accent color (please note that the accent color can be ignored by a GSS file)
+- **Cards** -> This element is for creating a card UI element. Cards may consist of a title, sub-title, image, button and a accent color (please note that the accent color can be ignored by a GSS file). Cards can also have 'backs'?
 
 - **Poster** -> This element is just like a card except it's larger on screen. It has the exact same attributes. The advantage to using a poster is that you have more area to write text and the image can be slightly larger.
 
-- **Toast** -> This element creates a temporary pop up and is meant to flash timely information on screen. There are three main types of toast: 
+- **Notification** -> This element creates a temporary pop up and is meant to flash timely information on screen. There are three main types of toast: 
 	1. Information 
 	2. Warning 
 	3. Error
@@ -60,6 +66,20 @@ Each widget will have a source key which indicates where the data is located tha
 
 - **Vertical_Tabs** -> This is just like tabs, but instead of having the tabs side by side, they are stacked in a column. *Need a better name for this one*
 
-- **Chat** ->
+- **Chat** -> This widget creates a chat like enviroment. You can select if it's group chat or point to point. This has the option of allowing items such as GIFs as well as custom emotes depending on the provider.
 
 - **Wiki** ->
+
+- **Tiles** -> This widget is meant to take a collection of cards or posters and group them in the event you want to make a simple selection screen. This can be attached with a filter widget.
+
+- **Poll** -> This widget allows users to vote on a particular item. Inside UndChain you can have the option of classifying which type of user can paticipate within the poll in order to decrease false feedback. These polls are also have an experation; when the polls close only the results are shown.
+
+## Sub-Widgets
+
+These widgets are sub-compoennts to widgets while they can operate on their own are normally apart of another widget.
+
+- **Reaction** -> This sub-widget provodes the ability to react to other widgets; for example reacting to a chat bubble.
+
+- **Comment** -> 
+
+- **Rating** -> This sub-widget is used as a means of identifying the type of content being viewed in regards to audiance type. The content creator as well as the consumer of the content are able to post.

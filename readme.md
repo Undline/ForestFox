@@ -39,6 +39,8 @@ Each widget will have a source key which indicates where the data is located tha
 
 - **Graph** -> This element is used to represet a graph widget on screen. Graphs that are currently included are line, chart, pie and fill.
 
+- **Table** -> This is meant to create a table of any size on the screen (if the columns and rows are too large than scroll bars will appear). This will use letters for columns and numbers for rows. This should make viewing databases easier as well as source data inside M3L files.
+
 - **Text Editor** -> This element is used to represent a Text Editor enviroment (not to be confused with Text area). This widget has the option of showing line numbers on the side and can also show the column nunber below.
 
 - **Canvas** -> This is a element that allows a user to create any graphics or drawings on screen and allows the user to scroll on both directions. Use this for things like sketches and markups. You can also add grid lines that allow shapes to snap in place.

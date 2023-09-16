@@ -21,31 +21,31 @@ Inside of M3L / GSS you will have different mode types that can be activated eit
 
 - **Dashboard mode** -> In this mode you will be in full screen (in the UI engine) that has a static window meaning you cannot scroll the window view vertically or horizontally (although a widget can still have a scroll). This mode would be best used for making overviews of data sets and is what will be switched to when you use a Game Controller. This mode isn't meant to have widgets that have higher order inputs, such as text inputs. It should be designed in such a way that a person with a gam controller can easily navigate around.
 
-- **Web mode** -> This mode was designed to give you a simlar look and feel as a normal website. It has vertical scroll only. *There is an option to place elements as STATIC so that they do not move when the user scrolls to a different section*
+- **Web mode** -> This mode was designed to give you a similar look and feel as a normal website. It has vertical scroll only. *There is an option to place elements as STATIC so that they do not move when the user scrolls to a different section*
 
-- **Desktop mode** -> This mode is designed for widescreen desktops and offers horizontal scroll and like Web mode you can place items as static so that they do not leave the screen as the user scrolls away *you can also paralax this so that when the user scrolls the leaves the view at a different rate as the main contenet*
+- **Desktop mode** -> This mode is designed for widescreen desktops and offers horizontal scroll and like Web mode you can place items as static so that they do not leave the screen as the user scrolls away *you can also parallax this so that when the user scrolls the leaves the view at a different rate as the main content*
 
 ## Widgets
 
 Each widget will have a source key which indicates where the data is located that contains what that widget is supposed to do / display. This is done so that you can have dynamic content displayed. Widgets can also have event states that trigger when an action is applied?
 
-- **Video** -> This element is meant to place a video widget on screen. There are multiple video modes to choose from (mini, normal, wide_screen and full_screen). 
+- **Video** -> This element is meant to place a video widget on screen. There are multiple video modes to choose from (mini, normal, wide_screen and full_screen). What if we could set the background to be the current video that's playing? 
 
-- **Goal Bar** -> This element is meant for creating a goal like structure; so things like monitary goals or interaction goals. So long as you can qunatify the progress you can use this widget and when the goal is hit there will be an event played (as defined by the GSS). Goal bars use the prgress bar widget and there are some items that you can connect by default inside UndChain such as donation interactions. Goals may go up or down as identified by the M3L.
+- **Goal Bar** -> This element is meant for creating a goal like structure; so things like monetary goals or interaction goals. So long as you can quantify the progress you can use this widget and when the goal is hit there will be an event played (as defined by the GSS). Goal bars use the progress bar widget and there are some items that you can connect by default inside UndChain such as donation interactions. Goals may go up or down as identified by the M3L.
 
-- **Map** -> This element is meant to place a map widget on screen. Map widget are not only useful for showing maps, but could also be used as a system to graphically show points of intrest on a image (2D). 
+- **Map** -> This element is meant to place a map widget on screen. Map widget are not only useful for showing maps, but could also be used as a system to graphically show points of interest on a image (2D). 
 
 - **Timeline** -> This element creates a time line where you can add events that will show as a horizontal bar chart on screen. Time lines will have markers to indicate length and may have images within them per the GSS file. There is also options to add multiple lines down.
 
-- **Graph** -> This element is used to represet a graph widget on screen. Graphs that are currently included are line, chart, pie and fill.
+- **Graph** -> This element is used to represent a graph widget on screen. Graphs that are currently included are line, chart, pie and fill. Probably add node graphs to this list so you can show relationships between objects.
 
 - **Table** -> This is meant to create a table of any size on the screen (if the columns and rows are too large than scroll bars will appear). This will use letters for columns and numbers for rows. This should make viewing databases easier as well as source data inside M3L files.
 
-- **Text Editor** -> This element is used to represent a Text Editor enviroment (not to be confused with Text area). This widget has the option of showing line numbers on the side and can also show the column nunber below.
+- **Text Editor** -> This element is used to represent a Text Editor environment (not to be confused with Text area). This widget has the option of showing line numbers on the side and can also show the column number below.
 
 - **Canvas** -> This is a element that allows a user to create any graphics or drawings on screen and allows the user to scroll on both directions. Use this for things like sketches and markups. You can also add grid lines that allow shapes to snap in place.
 
-- **GSS Emulator** -> This is meant to allow users to view a new GSS file within a different enviroment. This is mainly created so that when you create new pages you can view them with different GSS files to see if there are any conflicts with what you are submitting. *Hopefully it's not abused and used as a work-around for making pages that all have a different feel as that is the oppoisite of what is being done.*
+- **GSS Emulator** -> This is meant to allow users to view a new GSS file within a different environment. This is mainly created so that when you create new pages you can view them with different GSS files to see if there are any conflicts with what you are submitting. *Hopefully it's not abused and used as a work-around for making pages that all have a different feel as that is the opposite of what is being done.*
 
 - **Markdown** -> This element creates a view that can display markdown files. 
 
@@ -68,20 +68,26 @@ Each widget will have a source key which indicates where the data is located tha
 
 - **Vertical_Tabs** -> This is just like tabs, but instead of having the tabs side by side, they are stacked in a column. *Need a better name for this one*
 
-- **Chat** -> This widget creates a chat like enviroment. You can select if it's group chat or point to point. This has the option of allowing items such as GIFs as well as custom emotes depending on the provider.
+- **Chat** -> This widget creates a chat like environment. You can select if it's group chat or point to point. This has the option of allowing items such as GIFs as well as custom emotes depending on the provider.
 
 - **Wiki** ->
 
 - **Tiles** -> This widget is meant to take a collection of cards or posters and group them in the event you want to make a simple selection screen. This can be attached with a filter widget.
 
-- **Poll** -> This widget allows users to vote on a particular item. Inside UndChain you can have the option of classifying which type of user can paticipate within the poll in order to decrease false feedback. These polls are also have an experation; when the polls close only the results are shown.
+- **Poll** -> This widget allows users to vote on a particular item. Inside UndChain you can have the option of classifying which type of user can participate within the poll in order to decrease false feedback. These polls are also have an expiration; when the polls close only the results are shown.
 
 ## Sub-Widgets
 
-These widgets are sub-compoennts to widgets while they can operate on their own are normally apart of another widget.
+These widgets are sub-components to widgets while they can operate on their own are normally apart of another widget.
 
-- **Reaction** -> This sub-widget provodes the ability to react to other widgets; for example reacting to a chat bubble.
+- **Reaction** -> This sub-widget provides the ability to react to other widgets; for example reacting to a chat bubble.
 
 - **Comment** -> 
 
-- **Rating** -> This sub-widget is used as a means of identifying the type of content being viewed in regards to audiance type. The content creator as well as the consumer of the content are able to post.
+- **Rating** -> This sub-widget is used as a means of identifying the type of content being viewed in regards to audience type. The content creator as well as the consumer of the content are able to post.
+
+- **Color Picker** ->
+
+# Multi-device control
+
+The goal here is to make a UI that can span multiple-devices seamlessly with the same look and feel. Not sure how this is going to be implemented just yet, but it should feel just like having another screen attached on the machine you are currently using. Possibly like a supped up controller of sorts, that is tuned for the device that its being projected on. Also, as a means of taking your work environment with you (although if your on a smaller display like a phone this may limit your abilities)

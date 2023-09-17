@@ -29,7 +29,9 @@ Inside of M3L / GSS you will have different mode types that can be activated eit
 
 Each widget will have a source key which indicates where the data is located that contains what that widget is supposed to do / display. This is done so that you can have dynamic content displayed. Widgets can also have event states that trigger when an action is applied?
 
-- **Video** -> This element is meant to place a video widget on screen. There are multiple video modes to choose from (mini, normal, wide_screen and full_screen). What if we could set the background to be the current video that's playing? 
+- **Video** -> This element is meant to place a video widget on screen. There are multiple video modes to choose from (mini, normal, wide_screen and full_screen). On pause allow the user to write notes? What if we could set the background to be the current video that's playing? 
+
+- **Audio** -> This element is meant to play audio.
 
 - **Goal Bar** -> This element is meant for creating a goal like structure; so things like monetary goals or interaction goals. So long as you can quantify the progress you can use this widget and when the goal is hit there will be an event played (as defined by the GSS). Goal bars use the progress bar widget and there are some items that you can connect by default inside UndChain such as donation interactions. Goals may go up or down as identified by the M3L.
 
@@ -87,6 +89,16 @@ These widgets are sub-components to widgets while they can operate on their own 
 - **Rating** -> This sub-widget is used as a means of identifying the type of content being viewed in regards to audience type. The content creator as well as the consumer of the content are able to post.
 
 - **Color Picker** ->
+
+- **Button** ->
+
+# Launcher
+
+Think of the launcher much like a desktop for ForestFox, if you simply open ForestFox you will be taken to the launcher. Inside the launcher you should be able to launch application(s) that you have previously given permission to use from within ForestFox, rather than relying on the user to find the application in their normal desktop environment.
+
+# Keyboard Controls
+
+We should be able to set our own hot keys from within any application, but there are a few that cannot be re-mapped. Pressing escape on the keyboard (pause on a controller) once, must open the settings menu. Pressing it twice on the keyboard must return you to the launcher and three times should exit the application.
 
 # Multi-device control
 

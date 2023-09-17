@@ -7,7 +7,7 @@ This protocol is a work in process (WIP) and **will** change as needed. Please d
 ## Built with
 
 - Python 3.11.3
-- PyQt6
+- PySide6
 
 ## Overview
 

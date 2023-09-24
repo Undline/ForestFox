@@ -1,13 +1,9 @@
 
 The goal of dev logs is to keep notes throughout the development process. I may never look at them again, but it helps my process mentally.
 
-# Backend
-
-This file is meant to document backend development. This should include all of the business logic needed to make ForestFox run. Things such as inter-application communication and the current state of the UI.
-
 ## 2023.09.16
 
-Downloaded a new spell check software because I am horrible at spelling. I am going to implement the inter-communication link which will act like a server using local host (127.0.0.1) in order to pass in commands from applications. There should be a program access list at some point so that not any un-authorized application can interrupt the UI while it's being used by another program, however at this time I am just going to return true so that any attempt to make a connection will be accepted. -Undline
+I am going to implement the inter-communication link which will act like a server using local host (127.0.0.1) in order to pass in commands from applications. There should be a program access list at some point so that not any un-authorized application can interrupt the UI while it's being used by another program, however at this time I am just going to return true so that any attempt to make a connection will be accepted. -Undline
 
 ## 2023.09.17
 
@@ -20,3 +16,7 @@ I am going to change the core UI engine to Kivy. One of the primary reasons is b
 ## 2023.09.19
 
 Still learning Kivy; feeling pretty hopeful about implementing it here soon. I'm not going to post any updates until I have something useful to report. -Undline
+
+## 2023.09.20
+
+Had some ideas. First these developer notes need to move to their own folder since it seems like I am just dumping all the notes I have in this one file. Could re-name this to readme and then it would show in Github a bit nicer. Also, using the naming convention of Widget doesn't really explain what we are doing with these UI elements since they go beyond doing just one thing; for example the video element contains supplemental widgets with it, such as comments when running VOD and chat when streaming. Because of this I will need to re-structure the readme to reflect this change. -Undline

@@ -25,17 +25,23 @@ Inside of M3L / GSS you will have different mode types that can be activated eit
 
 - **Desktop mode** -> This mode is designed for widescreen desktops and offers horizontal scroll and like Web mode you can place items as static so that they do not leave the screen as the user scrolls away *you can also parallax this so that when the user scrolls the leaves the view at a different rate as the main content*
 
-## Widgets
+## Elements
 
-Each widget will have a source key which indicates where the data is located that contains what that widget is supposed to do / display. This is done so that you can have dynamic content displayed. Widgets can also have event states that trigger when an action is applied?
+An Element is a UI object that contains more that one Widget in order to describe what that UI element does. 
 
-- **Video** -> This element is meant to place a video widget on screen. There are multiple video modes to choose from (mini, normal, wide_screen and full_screen). On pause allow the user to write notes? What if we could set the background to be the current video that's playing? 
+- **Video Element** -> This element main goal is meant to place a video widget on screen. Other widgets include: reactions, goal bar, voting, quiz, comments / chat (depending if the content is being streamed), pop-ups (kind of like tool tips that a creator could use to add emphasis or create an interactive link to the content), close captioning (for now it would need to manually be entered, but at a later time it's expected to be auto generated via AI), rating which helps identify who the content is targeted to and video suggestions. As always the M3L could contain a blank for some of these items (for example video suggestions), those events should be handled by the GSS file as to what the UI looks like without those elements (if it matters; by default your other elements will just take up the empty space)
 
-- **Audio** -> This element is meant to play audio.
+- **Map** -> This element is meant to place a map widget on screen. Map elements are not only useful for showing maps, but could also be used as a system to graphically show points of interest on a image (2D). It consists of a 2D image widget that has tool tip widgets as 'landmarks' that can contain things that may contain links. There is also a marker widget that allows users to place there own landmarks and add details which can include the reaction widget. 
 
-- **Goal Bar** -> This element is meant for creating a goal like structure; so things like monetary goals or interaction goals. So long as you can quantify the progress you can use this widget and when the goal is hit there will be an event played (as defined by the GSS). Goal bars use the progress bar widget and there are some items that you can connect by default inside UndChain such as donation interactions. Goals may go up or down as identified by the M3L.
+- **Background Audio** -> This element is meant specifically to play audio in the background and have no controls other than the mute option in the settings menu (hit escape once on PC). This is controlled solely by the GSS file and cannot be assigned by the M3L file as this is mean to create a mood for the environment. I would recommend muting background audio (this is the default action) when another media source is playing but that is up to the GSS file and the user. 
 
-- **Map** -> This element is meant to place a map widget on screen. Map widget are not only useful for showing maps, but could also be used as a system to graphically show points of interest on a image (2D). 
+- **Spread Sheet** -> This element is meant to create a spread sheet and contains one or more table widgets as well as a tab widget, scroll widget, graph widget, and special text area widgets that are limited in size
+
+- **Social Media** -> This element creates a social media like element that has a messaging widget, reaction widget, rating widget and mute widget.
+
+
+
+
 
 - **Timeline** -> This element creates a time line where you can add events that will show as a horizontal bar chart on screen. Time lines will have markers to indicate length and may have images within them per the GSS file. There is also options to add multiple lines down.
 
@@ -76,11 +82,19 @@ Each widget will have a source key which indicates where the data is located tha
 
 - **Tiles** -> This widget is meant to take a collection of cards or posters and group them in the event you want to make a simple selection screen. This can be attached with a filter widget.
 
+
+
+## Widgets
+
+I previously called these Sub-Widgets, but the naming convention has changed. Widgets should be items that perform a single UI task and things such as video is one of those tasks. In events where we are describing something that is a collection of Widgets those will now be called elements (see above). This should make the terminology easier to understand. 
+
+- **Video** -> There are multiple video modes to choose from (mini, normal, wide_screen and full_screen). This widget contains the ability to pause and play the content. 
+
+- **Audio** -> This element is meant to play audio.
+
+- **Goal Bar** -> This element is meant for creating a goal like structure; so things like monetary goals or interaction goals. So long as you can quantify the progress you can use this widget and when the goal is hit there will be an event played (as defined by the GSS). Goal bars use the progress bar widget and there are some items that you can connect by default inside UndChain such as donation interactions. Goals may go up or down as identified by the M3L.
+
 - **Poll** -> This widget allows users to vote on a particular item. Inside UndChain you can have the option of classifying which type of user can participate within the poll in order to decrease false feedback. These polls are also have an expiration; when the polls close only the results are shown.
-
-## Sub-Widgets
-
-These widgets are sub-components to widgets while they can operate on their own are normally apart of another widget.
 
 - **Reaction** -> This sub-widget provides the ability to react to other widgets; for example reacting to a chat bubble.
 
@@ -102,4 +116,4 @@ We should be able to set our own hot keys from within any application, but there
 
 # Multi-device control
 
-The goal here is to make a UI that can span multiple-devices seamlessly with the same look and feel. Not sure how this is going to be implemented just yet, but it should feel just like having another screen attached on the machine you are currently using. Possibly like a supped up controller of sorts, that is tuned for the device that its being projected on. Also, as a means of taking your work environment with you (although if your on a smaller display like a phone this may limit your abilities)
+The goal here is to make a UI that can span multiple-devices seamlessly with the same look and feel. Not sure how this is going to be implemented just yet, but it should feel just like having another screen attached on the machine you are currently using. Possibly like a supped up controller of sorts, that is tuned for the device that its being projected on. Also, as a means of taking your work environment with you (although if your on a smaller display like a phone this may limit your abilities). Maybe the user controls what goes to another screen or should we allow controls that say if phone send chat (in GSS); would that make any sense? **Connected devices should show in the launcher for security purposes at minimum**

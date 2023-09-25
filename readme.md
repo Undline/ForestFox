@@ -7,7 +7,7 @@ This protocol is a work in process (WIP) and **will** change as needed. Please d
 ## Built with
 
 - Python 3.11.3
-- PySide6
+- Kivy
 
 ## Overview
 
@@ -39,27 +39,15 @@ An Element is a UI object that contains more that one Widget in order to describ
 
 - **Social Media** -> This element creates a social media like element that has a messaging widget, reaction widget, rating widget and mute widget.
 
+- **Text Editor** -> This element is used to represent a Text Editor environment. This contains a label widget for the numbering of rows, a text area widget that contains syntax highlighting, a tree widget to show file structures, a status bar widget and search widget to find text that is contained within the active project.
 
-
-
-
-- **Timeline** -> This element creates a time line where you can add events that will show as a horizontal bar chart on screen. Time lines will have markers to indicate length and may have images within them per the GSS file. There is also options to add multiple lines down.
-
-- **Graph** -> This element is used to represent a graph widget on screen. Graphs that are currently included are line, chart, pie and fill. Probably add node graphs to this list so you can show relationships between objects.
-
-- **Table** -> This is meant to create a table of any size on the screen (if the columns and rows are too large than scroll bars will appear). This will use letters for columns and numbers for rows. This should make viewing databases easier as well as source data inside M3L files.
-
-- **Text Editor** -> This element is used to represent a Text Editor environment (not to be confused with Text area). This widget has the option of showing line numbers on the side and can also show the column number below.
-
-- **Canvas** -> This is a element that allows a user to create any graphics or drawings on screen and allows the user to scroll on both directions. Use this for things like sketches and markups. You can also add grid lines that allow shapes to snap in place.
+- **Word Processor** -> This element is a lot like a text editor except i lacks the label widget to define which row your on and adds a spell check widget as well as a text modifier widget (when you left click (press and hold) you get commonly used options) 
 
 - **GSS Emulator** -> This is meant to allow users to view a new GSS file within a different environment. This is mainly created so that when you create new pages you can view them with different GSS files to see if there are any conflicts with what you are submitting. *Hopefully it's not abused and used as a work-around for making pages that all have a different feel as that is the opposite of what is being done.*
 
 - **Markdown** -> This element creates a view that can display markdown files. 
 
-- **Cards** -> This element is for creating a card UI element. Cards may consist of a title, sub-title, image, button and a accent color (please note that the accent color can be ignored by a GSS file). Cards can also have 'backs'?
-
-- **Poster** -> This element is just like a card except it's larger on screen. It has the exact same attributes. The advantage to using a poster is that you have more area to write text and the image can be slightly larger.
+- **Tiles** -> This widget is meant to take a collection of cards or posters and group them in the event you want to make a simple selection screen. This can be attached with a filter widget.
 
 - **Notification** -> This element creates a temporary pop up and is meant to flash timely information on screen. There are three main types of toast: 
 	1. Information 
@@ -68,19 +56,7 @@ An Element is a UI object that contains more that one Widget in order to describ
 
 - **Gallery** -> This element is to be used when you have a large set of images that you want to be shown. Images can be accompanied with descriptions with title and sub-title attributes
 
-- **Title_bar** -> Is used in application mode so that you can customize what you would like the application bar to have. Some of those items include, search, settings, menu options (like File, Edit etc.). 
 
-- **Top_Bar** -> This is meant to give an extended tool set to the user. Think something like the ribbon menu you see in applications such as office. A top bar can have a tools and sub-tools (listed as text, icons or both) just be aware that if the view area that the application is running on isn't wide enough some tools can be cut off. 
-
-- **Tabs** -> Tabs is meant to create tabs in a document so that you can quickly switch between page views within your application. Inside tabs you can have a title or you can have a editable text bar and close.
-
-- **Vertical_Tabs** -> This is just like tabs, but instead of having the tabs side by side, they are stacked in a column. *Need a better name for this one*
-
-- **Chat** -> This widget creates a chat like environment. You can select if it's group chat or point to point. This has the option of allowing items such as GIFs as well as custom emotes depending on the provider.
-
-- **Wiki** ->
-
-- **Tiles** -> This widget is meant to take a collection of cards or posters and group them in the event you want to make a simple selection screen. This can be attached with a filter widget.
 
 
 
@@ -96,7 +72,31 @@ I previously called these Sub-Widgets, but the naming convention has changed. Wi
 
 - **Poll** -> This widget allows users to vote on a particular item. Inside UndChain you can have the option of classifying which type of user can participate within the poll in order to decrease false feedback. These polls are also have an expiration; when the polls close only the results are shown.
 
+- **Timeline** -> This element creates a time line where you can add events that will show as a horizontal bar chart on screen. Time lines will have markers to indicate length and may have images within them per the GSS file. There is also options to add multiple lines down.
+
+- **Graph** -> This element is used to represent a graph widget on screen. Graphs that are currently included are line, chart, pie and fill. Probably add node graphs to this list so you can show relationships between objects.
+
+- **Table** -> This is meant to create a table of any size on the screen (if the columns and rows are too large than scroll bars will appear). This will use letters for columns and numbers for rows. This should make viewing databases easier as well as source data inside M3L files.
+
+- **Canvas** -> This is a element that allows a user to create any graphics or drawings on screen and allows the user to scroll on both directions. Use this for things like sketches and markups. You can also add grid lines that allow shapes to snap in place.
+
 - **Reaction** -> This sub-widget provides the ability to react to other widgets; for example reacting to a chat bubble.
+
+- **Title_bar** -> Is used in application mode so that you can customize what you would like the application bar to have. Some of those items include, search, settings, menu options (like File, Edit etc.). 
+
+- **Top_Bar** -> This is meant to give an extended tool set to the user. Think something like the ribbon menu you see in applications such as office. A top bar can have a tools and sub-tools (listed as text, icons or both) just be aware that if the view area that the application is running on isn't wide enough some tools can be cut off. 
+
+- **Tabs** -> Tabs is meant to create tabs in a document so that you can quickly switch between page views within your application. Inside tabs you can have a title or you can have a editable text bar and close.
+
+- **Vertical_Tabs** -> This is just like tabs, but instead of having the tabs side by side, they are stacked in a column. *Need a better name for this one*
+
+- **Chat** -> This widget creates a chat like environment. You can select if it's group chat or point to point. This has the option of allowing items such as GIFs as well as custom emotes depending on the provider.
+
+- **Cards** -> This element is for creating a card UI element. Cards may consist of a title, sub-title, image, button and a accent color (please note that the accent color can be ignored by a GSS file). Cards can also have 'backs'?
+
+- **Poster** -> This element is just like a card except it's larger on screen. It has the exact same attributes. The advantage to using a poster is that you have more area to write text and the image can be slightly larger.
+
+- **Wiki** ->
 
 - **Comment** -> 
 
@@ -106,14 +106,15 @@ I previously called these Sub-Widgets, but the naming convention has changed. Wi
 
 - **Button** ->
 
-# Launcher
+
+## Launcher
 
 Think of the launcher much like a desktop for ForestFox, if you simply open ForestFox you will be taken to the launcher. Inside the launcher you should be able to launch application(s) that you have previously given permission to use from within ForestFox, rather than relying on the user to find the application in their normal desktop environment.
 
-# Keyboard Controls
+## Keyboard Controls
 
 We should be able to set our own hot keys from within any application, but there are a few that cannot be re-mapped. Pressing escape on the keyboard (pause on a controller) once, must open the settings menu. Pressing it twice on the keyboard must return you to the launcher and three times should exit the application.
 
-# Multi-device control
+## Multi-device control
 
 The goal here is to make a UI that can span multiple-devices seamlessly with the same look and feel. Not sure how this is going to be implemented just yet, but it should feel just like having another screen attached on the machine you are currently using. Possibly like a supped up controller of sorts, that is tuned for the device that its being projected on. Also, as a means of taking your work environment with you (although if your on a smaller display like a phone this may limit your abilities). Maybe the user controls what goes to another screen or should we allow controls that say if phone send chat (in GSS); would that make any sense? **Connected devices should show in the launcher for security purposes at minimum**

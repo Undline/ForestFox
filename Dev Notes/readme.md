@@ -20,3 +20,19 @@ Still learning Kivy; feeling pretty hopeful about implementing it here soon. I'm
 ## 2023.09.20
 
 Had some ideas. First these developer notes need to move to their own folder since it seems like I am just dumping all the notes I have in this one file. Could re-name this to readme and then it would show in Github a bit nicer. Also, using the naming convention of Widget doesn't really explain what we are doing with these UI elements since they go beyond doing just one thing; for example the video element contains supplemental widgets with it, such as comments when running VOD and chat when streaming. Because of this I will need to re-structure the readme to reflect this change. -Undline
+
+## 2023.09.25
+
+I started thinking more about how elements and widgets should work in this system. Specifically I was thinking more about how layouts should occur and I am debating on just how I am going to allow the GSS file to define them. I would like to place full control over the layouts on owner of the GSS file, but we can't tie ourselves down to one framework (especially if we ever plan to go 3D); also I'd like to have something a bit simpler for designers to use. What I am thinking is to create **sections** that allow the designer to block out a design framework that they can call on. Each section would have it's own allocated dimensions as defined by the designer. I would love to have it where a designer could make abstract shapes for their layouts, but for now we will be limited to rectangles. Maybe something like this:
+
+```GSS
+[Application.Top_Bar]
+    type = "Section"
+    area = {width: "parent.width", height: "200dp"}
+    position: {x: "0", y: "top"}
+```
+
+Not sure if that would work well or not. *Note: The reasons why I called it Application.Top_Bar is that it indicates what view we are talking about (the application view) and it gives a unique ID to the section (since you have to have unique names for TOML tables). I like Kivy's dp measurement since it takes in account screen size and scales well, so we will use that regardless of the underlying framework we use.* I think what I should do at this point is go out and look at different UIs and try to mock them up (by hand) in M3L / GSS to make sure it can work. Should help me with defining what the language is.
+
+Something else that pops in my head periodically is that by making this UI engine, would it limit new UI elements in the future? It makes me wonder if there should be an element that lets the M3L file define where items are placed. I worry about doing this for design continuity reasons. It would still have the same style as the GSS widgets, but would take the UX portion away from the designers. Maybe the correct solution would be to hold voting on new elements, but then you have to worry about to many elements entering the space and making the GSS files massive (they already will be) so I am not sure that is the solution either. -Undline
+

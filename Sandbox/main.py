@@ -6,7 +6,7 @@ from kivy.uix.label import Label
 
 class ForestFox(App):
     def build(self):
-        return Label(text = "Hello there", font_size = 24)
+        return Label(text = "Hello there", font_size = '24dp')
     
 
 if __name__ == "__main__":

@@ -54,7 +54,26 @@ An Element is a UI object that contains more that one Widget in order to describ
 	2. Warning 
 	3. Error
 
-- **Gallery** -> This element is to be used when you have a large set of images that you want to be shown. Images can be accompanied with descriptions with title and sub-title attributes
+- **Gallery** -> This element is to be used when you have a large set of images that you want to be shown. Images can be accompanied with descriptions with title and sub-title attributes.
+
+- **Menu Bar** -> The menu bar element contains icon widgets as well as buttons, sliders, divider, drop down menus, tabs and page slides (pop ups that can take up an entire screen). There can only be one menu bar per application.
+
+- **Tool Bar** -> Has the same elements as a menu bar but there can be up to three (ideally one on the left, right and bottom) with the bottom one having a special widget for a status bar and the side tool bars having vertical tabs.
+
+- **Image Editor** -> This element type will have a canvas widget, Image widget, color picker and a tree widget (for selecting layers) 
+
+- **Node Graph** -> This element creates a node graph whose purpose is meant to mocking up ideas and showing relationships between various items. This will be using the grid widget, along with the shape widget and the arrow widget. This should also have a color picker widget. *Note: We should use Obsidian's open file format for these graph nodes*
+
+- **Hero Section** -> This UI element is really being created for the web view, but could be useful in an application environment as a way to invite the user to use the product. Hero sections should include a call to action (button widget), may have a sub-action, may contain a image or icon as well as a header widget and a sub header widget that can only contain 256 characters.
+
+- **Card Section** -> This is another UI element that is really meant for web view. This element creates a custom section that contains three cards and has it's own background widget.
+
+- **Item Grid** -> This element is a collection of cards and should be used in places where users are expected to choose an item(s). This also comes with the cart widget that can keep track of items selected (if you are able to select more than one).
+
+
+
+
+
 
 
 
@@ -98,14 +117,19 @@ I previously called these Sub-Widgets, but the naming convention has changed. Wi
 
 - **Wiki** ->
 
-- **Comment** -> 
+- **Ad** -> It's a *gasp* ad widget. This is really meant for UndChain so that you can get AdCoin (in the event that you're out). This should really be used in refuel pages (sites) only; since it doesn't make sense to have ads run on your page (the coin will go to the viewer not the page owner). I will add a blocking mechanism just in case.  
+
+- **Comment** -> This widget is a lot like the messaging widget, but I decided to make it's own thing because it needs to be styled differently. This widget allows the user to react to a previous comment, post a reply or add a comment.
 
 - **Rating** -> This sub-widget is used as a means of identifying the type of content being viewed in regards to audience type. The content creator as well as the consumer of the content are able to post.
 
 - **Color Picker** ->
 
-- **Button** ->
+- **Button** -> It's a button widget
 
+- **Divider** -> This widget type is only used by GSS files in order to logically divide up the screen into easy to use areas that UI elements can be placed. It should make it easier for designers to align and structure their UI elements on screen.
+
+- **Grid Widget** -> This widget creates a grid table of whatever size and spaces out the 'grid points' within a certain amount (set by the GSS file) by default is 10px. The goal with the grid widget is to make it easier for aligning objects (as well as other widgets) on screen since they will lock onto those grid points.  
 
 ## Launcher
 

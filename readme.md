@@ -31,6 +31,8 @@ An Element is a UI object that contains more that one Widget in order to describ
 
 - **Video Element** -> This element main goal is meant to place a video widget on screen. Other widgets include: reactions, goal bar, voting, quiz, comments / chat (depending if the content is being streamed), pop-ups (kind of like tool tips that a creator could use to add emphasis or create an interactive link to the content), close captioning (for now it would need to manually be entered, but at a later time it's expected to be auto generated via AI), rating which helps identify who the content is targeted to and video suggestions. As always the M3L could contain a blank for some of these items (for example video suggestions), those events should be handled by the GSS file as to what the UI looks like without those elements (if it matters; by default your other elements will just take up the empty space)
 
+- **Video Catalog** -> This element is when a user is browsing multiple videos. It's just like item selector except there isn't a checkout.
+
 - **Map** -> This element is meant to place a map widget on screen. Map elements are not only useful for showing maps, but could also be used as a system to graphically show points of interest on a image (2D). It consists of a 2D image widget that has tool tip widgets as 'landmarks' that can contain things that may contain links. There is also a marker widget that allows users to place there own landmarks and add details which can include the reaction widget. 
 
 - **Background Audio** -> This element is meant specifically to play audio in the background and have no controls other than the mute option in the settings menu (hit escape once on PC). This is controlled solely by the GSS file and cannot be assigned by the M3L file as this is mean to create a mood for the environment. I would recommend muting background audio (this is the default action) when another media source is playing but that is up to the GSS file and the user. 
@@ -58,9 +60,11 @@ An Element is a UI object that contains more that one Widget in order to describ
 
 - **Menu Bar** -> The menu bar element contains icon widgets as well as buttons, sliders, divider, drop down menus, tabs and page slides (pop ups that can take up an entire screen). There can only be one menu bar per application.
 
-- **Tool Bar** -> Has the same elements as a menu bar but there can be up to three (ideally one on the left, right and bottom) with the bottom one having a special widget for a status bar and the side tool bars having vertical tabs.
+- **Tools** -> Has the same elements as a menu bar but there can be up to three (ideally one on the left, right and bottom) with the bottom one having a special widget for a status bar and the side tool bars having vertical tabs.
 
-- **Image Editor** -> This element type will have a canvas widget, Image widget, color picker and a tree widget (for selecting layers) 
+- **Image Editor** -> This element type will have a canvas widget, Image widget, color picker and a tree widget (for selecting layers). 
+
+- **Video Editor** -> This element is made to create cuts and transitions in videos. It has the same widgets as the Image Editor, but also has a timeline that is meant to chop / merge video clips. *This functionality will be implemented at a later time*
 
 - **Node Graph** -> This element creates a node graph whose purpose is meant to mocking up ideas and showing relationships between various items. This will be using the grid widget, along with the shape widget and the arrow widget. This should also have a color picker widget. *Note: We should use Obsidian's open file format for these graph nodes*
 
@@ -68,9 +72,15 @@ An Element is a UI object that contains more that one Widget in order to describ
 
 - **Card Section** -> This is another UI element that is really meant for web view. This element creates a custom section that contains three cards and has it's own background widget.
 
-- **Item Grid** -> This element is a collection of cards and should be used in places where users are expected to choose an item(s). This also comes with the cart widget that can keep track of items selected (if you are able to select more than one).
+- **Shopping Grid** -> This element is a collection of cards and should be used in places where users are expected to choose an item(s). This also comes with the cart widget that can keep track of items selected (if you are able to select more than one).
 
+- **Article** -> This element is meant to produce long form text. It has header widget for things like titles, section headers for items that note a subject as well as paragraph widgets. *I am debating on if I should make this a book element instead and add items such as chapters...*
 
+- **Documentation** -> This is just like the article element except it adds hyperlink widgets as well as table of contents. You also have the ability to add images, video and blueprints (maps)
+
+- **Graph** -> This element is meant to display different graph types such as line, chart, pie, scatter and candles. This should have a canvas (so you can draw these shapes), as well as checkbox widgets, header widget, legend and bubble widget (so you can see detailed information when you hover over a data point)
+
+- **Custom** -> I think this one is going to get abused but this is a element that M3L defined. Inside the M3L you need to define not only the widgets that you need, but also window resizing events since the GSS cannot anticipate what is or is not important for this custom element. You will also need to define your own states if you are wanting to add undo / redo functionality as well as the ability to perform revision control.
 
 
 
@@ -129,7 +139,9 @@ I previously called these Sub-Widgets, but the naming convention has changed. Wi
 
 - **Divider** -> This widget type is only used by GSS files in order to logically divide up the screen into easy to use areas that UI elements can be placed. It should make it easier for designers to align and structure their UI elements on screen.
 
-- **Grid Widget** -> This widget creates a grid table of whatever size and spaces out the 'grid points' within a certain amount (set by the GSS file) by default is 10px. The goal with the grid widget is to make it easier for aligning objects (as well as other widgets) on screen since they will lock onto those grid points.  
+- **Grid Widget** -> This widget creates a grid table of whatever size and spaces out the 'grid points' within a certain amount (set by the GSS file) by default is 10px. The goal with the grid widget is to make it easier for aligning objects (as well as other widgets) on screen since they will lock onto those grid points. 
+
+- **Layer** -> This widget goes with any element and allows the GSS creator to layer other UI widgets on top of existing widgets (like adding a button on top of a image). Be careful, because if you layer over something that needs an interaction it could be impossible to interact with that widget.
 
 ## Launcher
 

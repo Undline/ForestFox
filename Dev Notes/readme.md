@@ -36,3 +36,16 @@ Not sure if that would work well or not. *Note: The reasons why I called it Appl
 
 Something else that pops in my head periodically is that by making this UI engine, would it limit new UI elements in the future? It makes me wonder if there should be an element that lets the M3L file define where items are placed. I worry about doing this for design continuity reasons. It would still have the same style as the GSS widgets, but would take the UX portion away from the designers. Maybe the correct solution would be to hold voting on new elements, but then you have to worry about to many elements entering the space and making the GSS files massive (they already will be) so I am not sure that is the solution either. -Undline
 
+## 2023.09.26
+
+What if whenever the window is resized (or change in orientation), you dynamically scale the widget / element by changing size, changing spacing or simply hide / add certain widgets from the view? Maybe we can assign priority to each element in the M3L to give the GSS a hint on what to emphasize. If there are no hints just go top down? 
+
+Still trying to wrap my head around multi-display (not only on a device that has two monitors but also connected devices such as your phone or tablet). Having the user manually move the element / widget to another device is not very intuitive. Maybe when the user 'steps away' or leaves one device and starts using another we automatically switch? Would it be a good idea to allow the GSS creator the ability to decide if a user has another device connected (and active) to send over widgets needed to control the main element on screen to that device?
+
+Make the language keywords and variable names case insensitive in order to discourage using the same variable name with different case and so you don't have to worry that keywords such as `true` and `True` are the same. -Undline 
+
+## 2023.09.27
+
+Mocking up what a video element could look like. Going to add that in with the Mock-up folder. Had a random thought and in regards to the rating system it doesn't make sense to allow a lesser rating than the one that was assigned by the creator so anytime a user assigns a rating to content it should be at or above that recommended age level. 
+
+While I was mocking up the video element I realized a couple items that I was missing and things that could be added to make it more custom. One of which would be on pause the video could have a shade applied to it, that could be animated. -Undline

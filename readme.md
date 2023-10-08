@@ -121,15 +121,19 @@ I previously called these Sub-Widgets, but the naming convention has changed. Wi
 
 - **Chat** -> This widget creates a chat like environment. You can select if it's group chat or point to point. This has the option of allowing items such as GIFs as well as custom emotes depending on the provider.
 
-- **Cards** -> This element is for creating a card UI element. Cards may consist of a title, sub-title, image, button and a accent color (please note that the accent color can be ignored by a GSS file). Cards can also have 'backs'?
+- **Cards** -> This widget is for creating a card UI element. Cards may consist of a title, sub-title, image, button and a accent color (please note that the accent color can be ignored by a GSS file). Cards can also have 'backs'?
 
-- **Poster** -> This element is just like a card except it's larger on screen. It has the exact same attributes. The advantage to using a poster is that you have more area to write text and the image can be slightly larger.
+- **Poster** -> This widget is just like a card except it's larger on screen. It has the exact same attributes. The advantage to using a poster is that you have more area to write text and the image can be slightly larger.
+
+- **Tags** -> This widget also acts just like a card or a widget except it's meant more for mobile / small spaces as it's small vertically.  
 
 - **Wiki** ->
 
 - **Ad** -> It's a *gasp* ad widget. This is really meant for UndChain so that you can get AdCoin (in the event that you're out). This should really be used in refuel pages (sites) only; since it doesn't make sense to have ads run on your page (the coin will go to the viewer not the page owner). I will add a blocking mechanism just in case.  
 
 - **Comment** -> This widget is a lot like the messaging widget, but I decided to make it's own thing because it needs to be styled differently. This widget allows the user to react to a previous comment, post a reply or add a comment.
+
+- **Section** -> This widget is meant more so for web, but it used to indicate a division of content. This can contain any other widgets, an is similar to the call to action banner.
 
 - **Rating** -> This sub-widget is used as a means of identifying the type of content being viewed in regards to audience type. The content creator as well as the consumer of the content are able to post.
 

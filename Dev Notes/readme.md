@@ -49,3 +49,9 @@ Make the language keywords and variable names case insensitive in order to disco
 Mocking up what a video element could look like. Going to add that in with the Mock-up folder. Had a random thought and in regards to the rating system it doesn't make sense to allow a lesser rating than the one that was assigned by the creator so anytime a user assigns a rating to content it should be at or above that recommended age level. 
 
 While I was mocking up the video element I realized a couple items that I was missing and things that could be added to make it more custom. One of which would be on pause the video could have a shade applied to it, that could be animated. -Undline
+
+## 2023.10.08
+
+Had an idea on another type of UI widget that I am going to call a tag. It's similar to a card / poster (uses a title, description and image / button), but saves on vertical spacing by being short. The inspiration behind this is making music play lists, but this may prove to be very useful on mobile. *I am debating on getting rid of tag and poster and having it so that you can define a shape / size for card. The only problem is I think it would make designing the GSS file more challenging.*
+
+Unrelated to this project (ForestFox), but with UndChain I believe there is a strong need to create a public and private wallet system so that you can sign transactions anonymously-ish. If you have transactions between public and private then it will become obvious... -Undline

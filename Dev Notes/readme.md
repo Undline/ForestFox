@@ -55,3 +55,7 @@ While I was mocking up the video element I realized a couple items that I was mi
 Had an idea on another type of UI widget that I am going to call a tag. It's similar to a card / poster (uses a title, description and image / button), but saves on vertical spacing by being short. The inspiration behind this is making music play lists, but this may prove to be very useful on mobile. *I am debating on getting rid of tag and poster and having it so that you can define a shape / size for card. The only problem is I think it would make designing the GSS file more challenging.*
 
 Unrelated to this project (ForestFox), but with UndChain I believe there is a strong need to create a public and private wallet system so that you can sign transactions anonymously-ish. If you have transactions between public and private then it will become obvious... -Undline
+
+## 2023.10.10
+
+Did some white boarding and need to add a screen manager to not only handle the local screens, but to also handle screens that are remote such as phone / tablet / watch / TV. I am going to place the screen manager on the backend. -Undline

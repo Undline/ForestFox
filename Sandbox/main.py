@@ -1,6 +1,5 @@
 # The reason for this is so I can test out ideas...
 
-import kivy
 from kivy.app import App
 from kivy.uix.label import Label
 
